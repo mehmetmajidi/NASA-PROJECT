@@ -110,7 +110,7 @@ async function saveLaunch(launch) {
   );
 }
 
-async function schedulNewLaunch(launch) {
+async function scheduleNewLaunch(launch) {
   const planet = await planets.findOne({
     keplerName: launch.target,
   });
@@ -146,6 +146,6 @@ module.exports = {
   loadLaunchData,
   existsLaunchWithId,
   getAllLaunches,
-  schedulNewLaunch,
+  scheduleNewLaunch,
   abortLaunchById,
 };
